@@ -4,6 +4,7 @@ import asyncio
 import music
 from discord.ext import commands
 from discord.utils import get 
+import token_txt
 """import dotenv
 
 dotenv.load_dotenv()"""
@@ -90,6 +91,6 @@ async def load_extensions():
 async def main():
     async with bot:
         await load_extensions()
-        await bot.start('MTAzNTYzNTQyNjA4MzQ3OTU2Mg.GMicZs.jyPYbTdWyMm9wvNN1TrXKOHBwSx3o_XkqtNL4k')
+        await bot.start(token=token_txt.tok())
 
 asyncio.run(main())
